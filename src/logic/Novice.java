@@ -26,7 +26,7 @@ public class Novice {
 		return this.name + " | HP : " + this.maxHp + " | Atk : " +this.attack+" | Def : " +this.defense;
 	}
 	public void action(Novice opponent) {
-		opponent.takeDamage(this.attack-opponent.getDefense());
+		opponent.takeDamage(this.getAttack()-opponent.getDefense());
 	}
 	public void takeDamage(int damage) {
 		if (damage < 1) {
