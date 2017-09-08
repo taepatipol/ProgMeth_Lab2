@@ -18,7 +18,9 @@ public class Summoner extends Novice {
 		if(this.summonedMonster == null && this.coolDown == 0) {
 			this.summon();
 		}
-		super.action(opponent);
+		if(opponent != null) {
+			super.action(opponent);
+		}
 		if(this.coolDown > 0) {
 			this.coolDown -= 1;
 		}
