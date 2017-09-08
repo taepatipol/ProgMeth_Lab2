@@ -47,7 +47,11 @@ public class Arena {
 		novices.add(n);
 	}
 	public Novice getNovice(int number) {
-		return novices.get(number);
+		if (number >= 0 && number < novices.size()) {
+			return novices.get(number);
+		} else {
+			return null;
+		}
 	}
 	public boolean canFight() {
 		if (novices.size() >= 2) {
